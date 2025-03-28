@@ -1,0 +1,153 @@
+:root {
+    --dark-bg: #121212;
+    --card-bg: #1E1E1E;
+    --hover-color: #2C2C2C;
+    --text-color: #E0E0E0;
+    --accent-color: #BB86FC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.app-title {
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.app-description {
+    max-width: 700px;
+    text-align: center;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 30px;
+}
+
+.initial-choice {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.choice-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.choice-btn:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.subjects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+}
+
+.subject-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.subject-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(187, 134, 252, 0.3);
+}
+
+.subject-icon {
+    font-size: 3rem;
+    color: var(--accent-color);
+}
+
+.subject-name {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.upload-section, .download-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.file-upload, .file-download {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    text-align: center;
+}
+
+.back-btn {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#fileUpload {
+    display: none;
+}
+
+.upload-label {
+    background-color: var(--accent-color);
+    color: var(--dark-bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-list {
+    list-style-type: none;
+    width: 100%;
+    padding: 20px;
+}
+
+.download-item {
+    background-color: var(--hover-color);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

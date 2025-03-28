@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StudentNoteHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-header">
+        <h1 class="app-title">StudentNoteHub</h1>
+        <p class="app-description">
+            StudentNoteHub is a collaborative platform designed to help students share and access study materials across various subjects. 
+            Upload your notes, download resources from peers, and create a community of learning and knowledge exchange.
+        </p>
+    </div>
+
+    <div class="initial-choice">
+        <button class="choice-btn" id="uploadBtn">Upload Notes</button>
+        <button class="choice-btn" id="downloadBtn">Download Notes</button>
+    </div>
+
+    <div id="subjectsContainer" class="subjects-container" style="display: none;">
+        <div class="subject-card" data-subject="c-programming">
+            <i class="fas fa-code subject-icon"></i>
+            <span class="subject-name">C Programming</span>
+        </div>
+        <div class="subject-card" data-subject="mathematics">
+            <i class="fas fa-book subject-icon"></i>
+            <span class="subject-name">Mathematics</span>
+        </div>
+        <div class="subject-card" data-subject="discrete-mathematics">
+            <i class="fas fa-book subject-icon"></i>
+            <span class="subject-name">Discrete Mathematics</span>
+        </div>
+        <div class="subject-card" data-subject="physics">
+            <i class="fas fa-atom subject-icon"></i>
+            <span class="subject-name">Physics</span>
+        </div>
+        <div class="subject-card" data-subject="chemistry">
+            <i class="fas fa-flask subject-icon"></i>
+            <span class="subject-name">Chemistry</span>
+        </div>
+        <div class="subject-card" data-subject="ipr">
+            <i class="fas fa-book subject-icon"></i>
+            <span class="subject-name">IPR</span>
+        </div>
+        <div class="subject-card" data-subject="foundation">
+            <i class="fas fa-book subject-icon"></i>
+            <span class="subject-name">Foundation</span>
+        </div>
+    </div>
+
+    <div id="uploadSection" class="upload-section">
+        <button class="back-btn" id="backToSubjectsUpload">Back to Subjects</button>
+        <div class="file-upload">
+            <h2 id="currentSubjectUpload"></h2>
+            <input type="file" id="fileUpload" accept=".pdf">
+            <label for="fileUpload" class="upload-label">Select PDF File</label>
+        </div>
+    </div>
+
+    <div id="downloadSection" class="download-section">
+        <button class="back-btn" id="backToSubjectsDownload">Back to Subjects</button>
+        <div class="file-download">
+            <h2 id="currentSubjectDownload"></h2>
+            <ul id="downloadList" class="download-list">
+                <!-- Dynamic list of downloadable files will be added here -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
